@@ -1,0 +1,129 @@
+/* Product.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  max-width: 900px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  padding: 25px 30px;
+}
+
+h2, h3 {
+  color: #222;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+form input {
+  flex: 1 1 200px;
+  padding: 12px 15px;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px #007bffaa;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  flex: 1 1 150px;
+  align-self: center;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+table thead tr {
+  background-color: #007bff;
+  color: white;
+}
+
+table thead th {
+  padding: 14px 10px;
+  text-align: left;
+}
+
+table tbody tr {
+  border-bottom: 1.5px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+table tbody tr:hover {
+  background-color: #f1f7ff;
+}
+
+table tbody td {
+  padding: 12px 10px;
+}
+
+table tbody td button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  margin-right: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+table tbody td button:last-child {
+  background-color: #dc3545;
+}
+
+table tbody td button:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 650px) {
+  form {
+    flex-direction: column;
+  }
+
+  form button {
+    flex: none;
+    width: 100%;
+  }
+}

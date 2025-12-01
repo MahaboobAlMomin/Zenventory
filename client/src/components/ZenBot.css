@@ -1,0 +1,103 @@
+/* ZenBot.css */
+.zenbot-container {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.zenbot-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #f4f7f9;
+  border-bottom: 1px solid #ddd;
+}
+
+.message {
+  max-width: 80%;
+  margin-bottom: 12px;
+  padding: 8px 14px;
+  border-radius: 18px;
+  word-wrap: break-word;
+  line-height: 1.3;
+  font-size: 14px;
+}
+
+.message.bot {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+.message.user {
+  background-color: #e5e5ea;
+  color: #000;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+.zenbot-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px;
+  background: #fafafa;
+  border-bottom: 1px solid #ddd;
+}
+
+.zenbot-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 8px 0;
+  font-size: 13px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.25s ease;
+}
+
+.zenbot-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.zenbot-input {
+  display: flex;
+  padding: 10px;
+  background: #fafafa;
+}
+
+.zenbot-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.zenbot-input input:focus {
+  border-color: #007bff;
+}
+
+.zenbot-input button {
+  padding: 10px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.zenbot-input button:hover {
+  background-color: #0056b3;
+}

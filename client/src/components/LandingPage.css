@@ -1,0 +1,184 @@
+:root {
+  --bg-light: #f0f4f8;
+  --bg-dark: #121212;
+  --text-light: #222;
+  --text-dark: #ddd;
+  --primary: #007bff;
+  --primary-dark: #0056b3;
+}
+
+[data-theme='light'] {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+[data-theme='dark'] {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.landing-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome-message {
+  font-weight: 700;
+  font-size: 2rem;
+  min-height: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+  user-select: none;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 1px;
+}
+
+.button-group {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.button-group button {
+  background-color: var(--primary);
+  border: none;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  transition: background-color 0.25s ease;
+  outline-offset: 3px;
+}
+
+.button-group button:hover,
+.button-group button:focus-visible {
+  background-color: var(--primary-dark);
+}
+
+/* Tooltip styling */
+.btn-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-tooltip .tooltip {
+  visibility: hidden;
+  background-color: var(--primary-dark);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 6px 12px;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  z-index: 110;
+}
+
+.btn-tooltip:hover .tooltip,
+.btn-tooltip:focus-visible .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Chatbot icon button */
+.chatbot-icon-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 32px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  transition: background-color 0.3s ease, transform 0.4s ease;
+}
+
+.chatbot-icon-btn:hover {
+  background-color: var(--primary-dark);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.chatbot-icon-btn.active {
+  background-color: #004080;
+  transform: scale(1.15) rotate(10deg);
+}
+
+/* Mic icon button */
+.mic-icon-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 110px; /* next to chatbot */
+  background-color: #28a745; /* green */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 32px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 128, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1060;
+  transition: background-color 0.3s ease, transform 0.4s ease;
+}
+
+.mic-icon-btn:hover {
+  background-color: #1e7e34;
+  transform: scale(1.1);
+}
+
+.mic-icon-btn.listening {
+  animation: pulse-green 1.2s infinite;
+  background-color: #dc3545; /* red while listening */
+  box-shadow: 0 0 15px 5px rgba(220, 53, 69, 0.7);
+  transform: scale(1.15);
+}
+
+@keyframes pulse-green {
+  0%, 100% {
+    box-shadow: 0 0 10px 2px #28a745;
+  }
+  50% {
+    box-shadow: 0 0 20px 6px #28a745;
+  }
+}
+
+/* Chatbot wrapper fade-in */
+.fade-in {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
